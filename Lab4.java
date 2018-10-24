@@ -18,5 +18,18 @@ public class Lab4 {
 		noapteBuna.add(cap1);
 		
 		noapteBuna.print();
+		
+		long startTime = System.currentTimeMillis();
+		Section cap4 = new Section ("Photo");
+		cap4.add(new Image ("Alin Muresan"));
+		Section cap2 = new Section ("Auto show");
+		cap2.add(new Image ("My dream BMW"));
+		cap2.add(new Image ("My car is a BMW"));
+		cap4.print();
+		long endTime = System.currentTimeMillis();
+		System.out.println(endTime-startTime);
+		
+		
+		
 	}
 }
