@@ -1,6 +1,6 @@
-
 public class Paragraph implements Element{
 	private String paragraph;
+	AlignStrategy a=new AlignRight();
 	public Paragraph(String paragraph){
 		this.paragraph = paragraph;
 	}
@@ -22,13 +22,17 @@ public class Paragraph implements Element{
 	}
 	@Override
 	public void getChild(int index) {
+		a.printAligned(paragraph);
 		// TODO Auto-generated method stub
 		
 	}
 	
 	@Override
 	public void print(){
-		System.out.println(paragraph);
+		a.printAligned(paragraph);
 	}
-
+	
+	public void setAlignStrategy(AlignStrategy align) {
+		a=align;
+	}
 }
